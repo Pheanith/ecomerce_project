@@ -1,0 +1,85 @@
+1. create node project
+2. npm init
+3. npm i express // to create server
+4. npm i nodemon // for auto start node
+5. npm i mysql // to use database
+6. npm i util // to use asycn await function
+7. npm i cors // allow cors policy meaning allow connection between api and react
+8. npm i bcrypt // hash password
+9. npm i multer // allow upload image
+
+// react
+1. npm i axios // allow connection between react and api
+2. npm install antd --save // use antd library
+3. npm install react-bootstrap bootstrap // use bootstrap library
+4. npm i --save moment // to use time convertion in react
+
+
+
+
+
+
+
+
+
+
+
+// route related
+// register route
+app.get("/",(req,res)=>{
+    res.send("You have request my root server")
+})
+// res.query, res.param
+app.get("/api/user",(req,res)=>{
+    var obj = {
+        list1 : [10,20],
+        list2 : ["Sok", "Som"] 
+    }
+    res.json(obj)
+})
+// req.query
+app.get("/api/product",(req,res)=>{
+    res.json({
+        a:10,
+        b:20,
+        getQuery:req.query
+    })
+})
+// req.params
+app.get("/api/product/:id",(req,res)=>{
+    var id = req.params.id
+    var arrProduct = [
+        {
+            name: "coca",
+            id: 101,
+            price: 1
+        },
+        {
+            name: "lala",
+            id: 102,
+            price: 2
+        },
+        {
+            name: "Dara",
+            id: 103,
+            price: 3
+        },
+    ]
+
+    var productTmp = []
+    for (var i = 0; i < arrProduct.length ; i++){
+        if(arrProduct[i].id == id){
+            productTmp.push(arrProduct[i])
+            break;
+        }
+    }
+    res.json({
+        List: productTmp
+    })
+})
+// req.body
+app.post("/api/product",(req,res)=>{
+    res.json({
+        message: req.body
+    })
+})
