@@ -1,0 +1,16 @@
+import { Outlet } from "react-router-dom";
+
+const LayoutLogin = () => {
+    return(
+        <div>
+            <div style={{backgroundColor: 'royalBlue'}}>
+                <h1 style={{color: '#FFF', padding: 5}}>Brand Name</h1>
+            </div>
+            <div style={{padding: 20}}>
+                <Outlet />
+            </div>
+        </div>
+    );
+}
+
+export default LayoutLogin
