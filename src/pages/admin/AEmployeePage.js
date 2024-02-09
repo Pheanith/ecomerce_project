@@ -102,31 +102,31 @@ const AEmployeePage = () => {
     }
     } else {
       // eslint-disable-next-line no-redeclare
-    //   var param = {
-    //     "employee_id" : id,
-    //     "firstname": values.firstname,
-    //     "lastname": values.lastname,
-    //     "gender": values.gender,
-    //     "dob": values.dob,
-    //     "tel": values.tel,
-    //     "email": values.email,
-    //     "role": values.role,
-    //     "address": values.address,
-    // }
+      var param = {
+        "employee_id" : id,
+        "firstname": values.firstname,
+        "lastname": values.lastname,
+        "gender": values.gender,
+        "dob": values.dob,
+        "tel": values.tel,
+        "email": values.email,
+        "role": values.role,
+        "address": values.address,
+    }
     // eslint-disable-next-line no-redeclare
-    var formData = new FormData()
-    formData.append("employee_id", id)
-    formData.append("firstname",values.firstname)
-    formData.append("lastname",values.lastname)
-    formData.append("gender",values.gender)
-    formData.append("dob",values.dob)
-    formData.append("tel",values.tel)
-    formData.append("email",values.email)
-    formData.append("role",values.role)
-    formData.append("address",values.address)
+    // var formData = new FormData()
+    // formData.append("employee_id", id)
+    // formData.append("firstname",values.firstname)
+    // formData.append("lastname",values.lastname)
+    // formData.append("gender",values.gender)
+    // formData.append("dob",values.dob)
+    // formData.append("tel",values.tel)
+    // formData.append("email",values.email)
+    // formData.append("role",values.role)
+    // formData.append("address",values.address)
     // formData.append("img_emp",image,image.filename)
 
-    const res = await request("employee","put",formData);
+    const res = await request("employee","put",param);
     if(!res.error){
       getList()
       form.resetFields()

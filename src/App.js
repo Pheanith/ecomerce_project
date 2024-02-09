@@ -20,6 +20,8 @@ import AProduct from "./pages/admin/AProduct";
 import ALoginPage from "./pages/admin/ALoginPage";
 import ARegisterPage from "./pages/admin/ARegisterPage";
 import AEmployeePage from "./pages/admin/AEmployeePage";
+import ACustomer from "./pages/admin/ACustomer";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
           <Route path="blog" element={<Blogs />} />
           <Route path="sproduct" element={<SProduct />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="about" element={<About />} />
           <Route path="*" element={<NoPage />} />
         </Route>
 
@@ -50,6 +53,7 @@ function App() {
           {/* Branch Page */}
           <Route path="product" element={<AProduct />} />
           <Route path="employee" element={<AEmployeePage />} />
+          <Route path="customer" element={<ACustomer />} />
           <Route path="*" element={<NoPage />} />
         </Route>
 

@@ -84,21 +84,16 @@ function MainLayout() {
                   label: "Employee",
                   onClick: () => onLinkPage("/admin/employee"),
                 },
+                {
+                  key: "4",
+                  icon: <VideoCameraOutlined />,
+                  label: "Customer",
+                  onClick: () => onLinkPage("/admin/customer"),
+                }
               ]}
             />
           </Sider>
-          {/* <img
-            src="http://localhost/Project/e-commerce-img/img-1707202405847-796054020"
-            width={200}
-            height={200}
-          /> */}
           <Layout>
-            {/* <Header
-              style={{
-                padding: 0,
-                background: colorBgContainer,
-              }}
-            > */}
             <Header style={{ padding: 0, background: colorBgContainer }}>
               <div className={styles.containHeader}>
                 <div>
